@@ -1,0 +1,300 @@
+$white: #ffffff;
+$black: #000000;
+$grey01: #f9f9f9;
+$grey02: #999999;
+$grey03: #cccccc;
+$verde01: #6DC19A;
+$verde02: #1BBC9B;
+$dorado: #C09456;
+
+.container-fluid{
+    margin-bottom: 30px;
+}
+
+.header{
+    position: relative;
+    width: 100%;
+    height: 500px;
+    margin-bottom: 30px;
+    padding: 20px;
+    background-image: url(../img/hero/hero.jpg);
+    background-size: cover;
+    background-position: center center;
+    border-bottom: 10px solid $dorado;
+    header{
+        position: fixed;
+        width: 100%;
+        z-index: 100;
+        left: 0px;
+        top: 200px;
+        opacity: 0;
+        .social_media{
+            padding: unset;
+            margin-left: 50px;
+            li{
+                display: inline-block;
+                margin: 0px 20px;
+                a{
+                    img{
+                        max-width: 20px;
+                        height: 20px;
+                        opacity: 0.6;
+                        &:hover{
+                            opacity: 1;
+                        }
+                    }
+
+                }
+            }
+        }
+        .btn_appointment{
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            width: 200px;
+            height: 50px;
+            text-align: center;
+            background-color: $verde02;
+            display: table; 
+            vertical-align: middle;
+            z-index: 10;
+
+            opacity: 1;
+            &:hover{
+                background-color: $verde01;
+                cursor: pointer;
+            }
+            h3{
+                font-size: 14px;
+                font-weight: bold;
+                display: table-cell; 
+                vertical-align: middle;
+            }
+        }
+    }
+    .back_opacity{
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        background-color: $black;
+        opacity: 0.5;
+    }
+    .main_logo{
+        position: relative;
+        top: 0px;
+        opacity: 0;
+        display: block;
+        width: 250px;
+        margin: 0px auto 0px;
+    }
+}
+
+.seccion_head{
+    .icon{
+        display: block;
+        width: 40px;
+        margin: auto;
+    }
+    h2{
+        display: block;
+        text-align: center;
+        margin: 20px auto 30px;
+    }
+    .line_1{
+        display: block;
+        width: 100px;
+        height: 10px;
+        margin: 30px auto;
+        background-color: $black;
+        border-radius: 5px;
+    }
+}
+
+.about{
+    padding-left: unset;
+    padding-right: unset;
+    .col_img{
+        text-align: center;
+        overflow: hidden;
+        img{
+            position: relative;
+            &.img_r{
+                right: 500px;
+            }
+            &.img_l{
+                left: 500px;
+            }
+        }
+    }
+    .col_cont{
+        .sing{
+            display: block;
+            margin: auto;
+            width: 300px;
+        }
+    }
+}
+
+.how_we_do{
+    .title{
+        background-image: url(../img/sections/1.jpg);
+        background-size: cover;
+        background-position: center center;
+        h2{
+            font-size: 42px;
+            margin-top: 160px;
+            color: $white;
+            text-align: center;
+        }
+    }
+    .content{
+        background-color: $grey01;
+        padding-top: 30px;
+        .hwd_list{
+            list-style: none;
+            .hwd_item{
+                position: relative;
+                height: 100px;
+                margin-bottom: 20px;
+                padding: 0 20px 0 70px;
+                img{
+                    position: absolute;
+                    left: 0px;
+                    top: 16px;
+                    width: 40px;
+                }
+                h3{
+                    font-size: 20px;
+                    font-weight: bold;
+                }
+                p{
+                    color: $grey02;
+                }
+            }
+        }
+    }
+}
+
+.services{
+    margin-top: 100px;
+    .service_item{
+        padding: 0px 40px;
+        text-align: center;
+        div{
+            position: relative;
+            width: 300px;
+            height: 300px;
+            margin: auto;
+            border-radius: 50%;
+            overflow: hidden;
+            img{
+                width: 100%;
+            }
+            span{
+                position: absolute;
+                top: 46%;
+                left: 0px;
+                width: 100%;
+                text-align: center;
+                font-size: 24px;
+                font-weight: 500;
+                color: $white;
+            }
+        }
+        .t_services{
+            font-size: 16px;
+            color: $grey03;
+        }
+        .p_services{
+            font-size: 17px;
+            color: $grey02;
+            height: 100px;
+        }
+        a{
+            display: block;
+            width: 300px;
+            margin: auto;
+            font-size: 20px;
+            font-weight: 500;
+            color: $verde01;
+            border-bottom: 1px solid $verde01;
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .header{
+        header{
+            .social_media{
+                display: table;
+                margin: auto;
+                margin-bottom: 20px;
+            }
+            .btn_appointment{
+                position: relative;
+                margin: auto;
+                right: unset;
+                top: unset;
+            }
+        }
+    }
+
+    .about{
+        .col_img{
+            margin-bottom: 50px;
+        }
+    }
+
+    .seccion_head{
+        padding: 0px 20px;
+        .line_1{
+            margin-bottom: 50px;
+        }
+    }
+
+    .about{
+        .col_cont{
+            .sing{
+                width: 150px;
+            }
+            margin-bottom: 100px;
+        }
+    }
+
+    .how_we_do{
+        .title{
+            height: 400px;;
+        }
+        .content{
+            .hwd_list{
+                padding: 0px 0px 0px 20px;
+                .hwd_item{
+                    height: unset;
+                    margin-bottom: 50px;
+                    img{
+                        width: 60px;
+                        left: -10px;
+                    }
+                }
+            }
+        }
+    }
+
+    .services{
+        .service_item{
+            margin-bottom: 50px;
+            div{
+                width: 250px;
+                height: 250px;
+            }
+            .p_services{
+                height: unset;
+            }
+            a{
+                width: 200px;
+            }
+        }
+    }
+}
